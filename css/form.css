@@ -1,0 +1,37 @@
+div#perInfo,div#accident,div#pinsurance,div#refPhysician{
+	font-size:14px;
+	padding-top:20px;
+	margin:5px;
+	background-color:#9CF;
+	padding-left:20px;
+}
+div#perInfo,div#refPhysician,div#diagnosis,div#apptInfor
+{
+	background-color:#F8F8F8;
+	
+}
+div#diagnosis,div#apptInfor
+{
+	text-align:center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+div#accident,div#pinsurance
+{
+	background-color:#FFC;
+}
+
+ul
+{
+	list-style:none;
+}
+label.pacemaker,label.headSurgery,label.sharpnel,label.mImplants,label.pregnant,label.autoYes,label.compyes,label.doi,
+label.attEmp,label.addressAtt
+
+{
+	margin-left:55px;
+}
+label.clips,label.anySurgery,label.catScan,label.xray,label.autoNo,label.compno
+{margin-left:20px;
+}
+

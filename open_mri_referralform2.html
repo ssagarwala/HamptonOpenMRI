@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Hampton Open MRI,Florissant Open MRI-MRI Obtaining detailed pictures of Internal body without the use of radiation or 
+radioactive subtances </title>
+<meta name="description=" content="Hampton Open MRI, Florissant Open MRI provide MRI Magnetic Resonance Imaging,a method of 
+obtaining detailed pictures of internal body structures without the use of radiation or radioactive substances of nay kind.">
+<meta name="keywords" content="Hampton Open MRI, Florissant Open MRI">
+<meta name="robots" content="index,follow" />
+<link rel="stylesheet" href="default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/style-nivo.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/horizontal_meu.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+<link rel="stylesheet" href="css/form.css" type="text/css"/>
+
+<script src="js/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8">
+</script>
+<script src="js/jquery-1.6.min.js" type="text/javascript">
+</script>
+<script src="js/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8">
+</script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
+</script>
+<script>
+jQuery(document).ready( function() {
+// binds form submission and fields to the validation engine
+jQuery("#formReferral").validationEngine();
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+<a href="index.html" > 
+<img src="images/hampton-mri-header.jpg" alt="Hampton OPEN MRI, Florissant OPEN MRI" title="Hampton OPEN MRI, Florissant OPEN MRI" class="bborder"/></a>
+
+
+<ul class="semiopaquemenu">
+<li><a href="index.html">Home</a></li>
+<li><a href="mri_clinician_info.html">Clinic Info</a></li>
+<li><a href="open_mri_referralform.html" class="selected"> MRI Referral </a></li>
+<li><a href="open_mri_locations.html">MRI Centers</a></li>
+<li><a href="mri_registrationForm.html">Registration</a></li>
+<li><a href="open_mri_faqs.html">Faqs</a></li>
+
+</ul>
+
+
+  
+<div id="medical-billing-needs">
+<div id="need1">
+<p><img src="images/yellow_square.jpg" /> &nbsp; All Insurances Accepted</p>
+</div>
+<div id="need2">
+<p><img src="images/yellow_square.jpg" />&nbsp; Test Results Next Business Day </p>
+</div>
+<div id="need3">
+<p><img src="images/yellow_square.jpg" /> &nbsp; Emergency Scheduling 24/7  </p>
+</div>
+</div>
+
+<!-------------->
+<div id="refForm">
+<form id="formReferral" class="formular" method="post" action="refFormSubmit.php"> 
+
+<div id="perInfo">
+<h1 style="color:#000;font-weight:normal;font-size:large;">Open MRI - Referral Form</h1><br />
+
+<label for="lName" class="lastName">  Last Name <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyLetterSp]] text-input " type="text" name="lName" id="lName" />
+</label>
+ 
+<label for="fName" class="firstName">  First Name <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyLetterSp]] text-input" type="text" name="fName" id="fName" />
+</label>
+
+<label for="mName" class="midName">  Middle Initial 
+<input value="" class="validate[custom[onlyLetterSp]] text-input" type="text" name="mName" id="mName" />
+</label>
+
+<br /><br />
+
+<label  for="male" class="gender"><span style="color:#F00"> * </span>Gender:  Male</label>
+<input type="radio" name="sex" id="male" value="male" class="validate[required]"/>
+<label for="female" >Female</label>
+<input type="radio" name="sex" id="female" value="female" class="validate[required]"/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="bdate" class="bdate">  Date of Birth: 
+<select name="byear"></select>
+<select name="bmonth">
+    <option value="1">Jan</option>
+    <option value="2">Feb</option>
+    <option value="3">Mar</option>
+    <option value="4">Apr</option>
+    <option value="5">May</option>
+    <option value="6">Jun</option>
+    <option value="7">Jul</option>
+    <option value="8">Aug</option>
+    <option value="9">Sep</option>
+    <option value="10">oct</option>
+    <option value="11">Nov</option>
+    <option value="12">Dec</option>
+</select>
+<select name="bday"></select>
+<script>
+ var ysel = document.getElementsByName("byear")[0],
+    msel = document.getElementsByName("bmonth")[0],
+    dsel = document.getElementsByName("bday")[0];
+for (var i = 2013; i >= 1905; i--) {
+    var opt = new Option();
+    opt.value = opt.text = i;
+    ysel.add(opt);
+}
+ysel.addEventListener("change", validate_date);
+msel.addEventListener("change", validate_date);
+
+function validate_date() {
+    var y = +ysel.value, m = msel.value, d = dsel.value;
+    if (m === "2")
+        var mlength = 28 + (!(y & 3) && ((y % 100) !== 0 || !(y & 15)));
+    else var mlength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1];
+    dsel.length = 0;
+    for (var i = 1; i <= mlength; i++) {
+        var opt = new Option();
+        opt.value = opt.text = i;
+        if (i == d) opt.selected = true;
+        dsel.add(opt);
+    }
+}
+validate_date();
+</script>
+<br /><br />
+<label for="address" class="address">  Street Name & Number<span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyLetterNumber]]text-input " type="text" name="address" id="address" />
+</label>
+
+<label for="city" class="city">City <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyLetterSp]] text-input " type="text" name="city" id="city" />
+</label>
+
+<select name="state"> 
+<option value="" selected="selected">Select a State</option> 
+<option value="AL">Alabama</option> 
+<option value="AK">Alaska</option> 
+<option value="AZ">Arizona</option> 
+<option value="AR">Arkansas</option> 
+<option value="CA">California</option> 
+<option value="CO">Colorado</option> 
+<option value="CT">Connecticut</option> 
+<option value="DE">Delaware</option> 
+<option value="DC">District Of Columbia</option> 
+<option value="FL">Florida</option> 
+<option value="GA">Georgia</option> 
+<option value="HI">Hawaii</option> 
+<option value="ID">Idaho</option> 
+<option value="IL">Illinois</option> 
+<option value="IN">Indiana</option> 
+<option value="IA">Iowa</option> 
+<option value="KS">Kansas</option> 
+<option value="KY">Kentucky</option> 
+<option value="LA">Louisiana</option> 
+<option value="ME">Maine</option> 
+<option value="MD">Maryland</option> 
+<option value="MA">Massachusetts</option> 
+<option value="MI">Michigan</option> 
+<option value="MN">Minnesota</option> 
+<option value="MS">Mississippi</option> 
+<option value="MO">Missouri</option> 
+<option value="MT">Montana</option> 
+<option value="NE">Nebraska</option> 
+<option value="NV">Nevada</option> 
+<option value="NH">New Hampshire</option> 
+<option value="NJ">New Jersey</option> 
+<option value="NM">New Mexico</option> 
+<option value="NY">New York</option> 
+<option value="NC">North Carolina</option> 
+<option value="ND">North Dakota</option> 
+<option value="OH">Ohio</option> 
+<option value="OK">Oklahoma</option> 
+<option value="OR">Oregon</option> 
+<option value="PA">Pennsylvania</option> 
+<option value="RI">Rhode Island</option> 
+<option value="SC">South Carolina</option> 
+<option value="SD">South Dakota</option> 
+<option value="TN">Tennessee</option> 
+<option value="TX">Texas</option> 
+<option value="UT">Utah</option> 
+<option value="VT">Vermont</option> 
+<option value="VA">Virginia</option> 
+<option value="WA">Washington</option> 
+<option value="WV">West Virginia</option> 
+<option value="WI">Wisconsin</option> 
+<option value="WY">Wyoming</option>
+</select> 
+<label for="zip" class="zip">ZIP <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyNumberSp]] text-input " type="text" name="zip" id="zip" />
+</label>
+
+<br /><br />
+<label for="phone" class="r_phone"> Phone # XXX-XXX-XXXX  <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[phone]] text-input" type="text" name="phone" id="phone" />
+</label>
+
+<label for="email" class="r_email">
+Email Address : <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[email]] text-input" type="text" name="email" id="email" />
+</label>
+
+<label for"planNumber" class="planNumber"> Medical Plan & Number </label>
+<input  value="" class="validate[custom[onlyLetterNumber]] text-input" type="text" name="planNumber"  id="planNumber"/>
+
+
+</div>
+<div class="clear"></div>
+
+<div id="refPhysician">
+REFERING PHYSICIAN <br />
+<label id="physician">  Refering Physician <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyLetterSp]] text-input " type="text" name="physician" id="physician" />
+</label>
+<label id="pphone" class="pphone"> Phone # XXX-XXX-XXXX  <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[phone]] text-input" type="text" name="pphone" id="pphone" />
+</label>
+<label id="pfax" class="pfax"> Fax # XXX-XXX-XXXX 
+<input value="" class="validate[custom[fax]] text-input" type="text" name="pfax" id="pfax" />
+</label>
+<br /><br />
+
+<label id="paddress">  Street Name & Number<input value="" class="validate[custom[onlyLetterNumber]]text-input" type="text" name="paddress" id="paddress" />
+</label>
+<label for="pcity" class="pcity">City 
+<input value="" class="validate[custom[onlyLetterSp]] text-input " type="text" name="pcity" id="pcity" />
+</label>
+
+<select name="pstate"> 
+<option value="" selected="selected">Select a State</option> 
+<option value="AL">Alabama</option> 
+<option value="AK">Alaska</option> 
+<option value="AZ">Arizona</option> 
+<option value="AR">Arkansas</option> 
+<option value="CA">California</option> 
+<option value="CO">Colorado</option> 
+<option value="CT">Connecticut</option> 
+<option value="DE">Delaware</option> 
+<option value="DC">District Of Columbia</option> 
+<option value="FL">Florida</option> 
+<option value="GA">Georgia</option> 
+<option value="HI">Hawaii</option> 
+<option value="ID">Idaho</option> 
+<option value="IL">Illinois</option> 
+<option value="IN">Indiana</option> 
+<option value="IA">Iowa</option> 
+<option value="KS">Kansas</option> 
+<option value="KY">Kentucky</option> 
+<option value="LA">Louisiana</option> 
+<option value="ME">Maine</option> 
+<option value="MD">Maryland</option> 
+<option value="MA">Massachusetts</option> 
+<option value="MI">Michigan</option> 
+<option value="MN">Minnesota</option> 
+<option value="MS">Mississippi</option> 
+<option value="MO">Missouri</option> 
+<option value="MT">Montana</option> 
+<option value="NE">Nebraska</option> 
+<option value="NV">Nevada</option> 
+<option value="NH">New Hampshire</option> 
+<option value="NJ">New Jersey</option> 
+<option value="NM">New Mexico</option> 
+<option value="NY">New York</option> 
+<option value="NC">North Carolina</option> 
+<option value="ND">North Dakota</option> 
+<option value="OH">Ohio</option> 
+<option value="OK">Oklahoma</option> 
+<option value="OR">Oregon</option> 
+<option value="PA">Pennsylvania</option> 
+<option value="RI">Rhode Island</option> 
+<option value="SC">South Carolina</option> 
+<option value="SD">South Dakota</option> 
+<option value="TN">Tennessee</option> 
+<option value="TX">Texas</option> 
+<option value="UT">Utah</option> 
+<option value="VT">Vermont</option> 
+<option value="VA">Virginia</option> 
+<option value="WA">Washington</option> 
+<option value="WV">West Virginia</option> 
+<option value="WI">Wisconsin</option> 
+<option value="WY">Wyoming</option>
+</select> 
+
+<label for="pzip" class="pzip">Zip 
+<input value="" class="validate[custom[onlyNumberSp]] text-input " type="text" name="pzip" id="pzip" />
+</label>
+
+<br /><br />
+
+
+
+<label for="report" class="report">Report Required: Stat</label>
+<input type="radio" name="report" id="stat" value="stat"/>
+<label for="report" >Standard</label>
+<input type="radio" name="report" id="standard" value="standard"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for"reportwithin" class="reportwithin">Report Within 24 hours </label>
+<input type="checkbox" name="reportwithin" id="reportwithin" value="reportwithin"/>
+
+</div>
+
+<div id="diagnosis">
+<h2>PART 2 - MEDICAL HISTORY QUESTIONAIRE</h2>
+<h3>PROVISIONAL DIAGNOSIS </h3>
+
+<h3> Reason for Referral & Clinical History, including Diagnosis Code (IC-9): List or bring relevant reports : <span style="color:#F00"> * </span></h3>
+<textarea  class="validate[required,custom[onlyLetterNumber]]text-input" name="diagnosis" value="" rows="4" cols="70">
+</textarea>
+</div>
+
+<div id="apptInfor">
+<h2>PART 3 - Patient Appointment Information </h2>
+<h3> MRI EXAM REQUEST (With CPT/ Diagnosis Code Included )<span style="color:#F00"> * </span> </h3>
+<textarea  class="validate[required,custom[onlyLetterNumber]]text-input" name="mriRequest" value="" rows="4" cols="70">
+</textarea>
+<br /><br />
+<label id="insurance" class="insurance"> Insurance Authorization  <span style="color:#F00"> * </span>
+<input value="" class="validate[required,custom[onlyLetterNumber]] text-input" type="text" name="insurance" id="insurance" />
+</label>
+</div>
+
+<br /><br />
+<img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" /><br /><br />
+<input type="text" name="captcha_code" size="10" maxlength="6" />
+<a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+<input class="submit" type="submit" value="Send the Form!"/>
+</form>
+</div>
+<div class="clear"></div>
+
+
+ 
+<div id="footer" class="stickyFooter"> 
+<ul>
+<li><a href="mri_medical_disclaimer.html">Disclaimer</a></li>
+<li><a href="open_mri_faqs.html">Faqs</a></li>
+<li class="last-bottom"><a href="open_mri_locations.html"> Contact Us</a></li>
+</ul>
+  
+<div id="copyright">Copyright 2013©  Cyber Diagnostic. All rights reserved.</div>
+ <div id="website_by">
+  Website by  <a href="http://webna.us"> webna.us</a> 
+  </div>
+  
+  </div>
+  <div class="cls"></div>
+</body>
+</html>

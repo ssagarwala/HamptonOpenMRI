@@ -1,0 +1,376 @@
+*
+{
+padding:0;
+margin:0;
+}
+html,body
+{height:100%;
+}
+body{
+text-align:center;
+background-image:url(../images/bgslice.jpg);
+background-repeat:repeat-x;
+background-color:#FFF9E3;
+
+
+}
+div#container  {
+margin-top:5px;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+width:70em;
+/*background:#f7f7f7 url(../images/pattern.png) repeat top left;	
+*/background-color:#FFF;
+}
+
+.bborder{
+	border-left:#999 5px solid;
+	border-right:#999 5px solid;
+	border-top:#999 5px solid;
+	border-bottom:#999 5px solid;
+}
+div#email
+{
+font-size:20px;
+width:100px;
+float:left;
+margin-left:80px;
+text-decoration:underline;
+
+}
+div#email a
+{
+	color:#FFF
+}
+
+div#about
+{
+	margin:0;
+	padding:0;
+ 	padding-bottom:0;
+	width:970px;
+	height:360px;
+	background-image:url(../images/medical-billing-about.jpg);
+	background-color:#FFFFCC;
+	background-repeat:repeat-y;
+	color:#FFF;
+	border-left:#999 5px solid;
+	border-right:#999 5px solid;
+}
+
+div#mri_patients
+{
+	width:99%;	
+	font-size: 100%;
+	font-size:12px;
+	color:#333;
+	background-color:#fffff0;
+	padding-bottom:120px;
+	height:30em;
+	padding-left:12px;
+}
+div#mri_clinician
+{
+	padding-left:10px;
+	font-size: 100%;
+	line-height:2em;
+	font-size:14px;
+	border-left:#FFF 5px solid;
+	border-right:#FFF 5px solid;
+	border-bottom:#FFF 5px solid;
+	color:#333;
+	padding-bottom:120px;
+}
+
+div#mri_clinician img
+{
+	float:right;
+	margin-left:20px;
+}
+div#mri_clinician h1
+{
+	font-size:24px;
+	padding:20px;
+	font-size:28px;
+	color:#333;
+	font-family: 'Josefin Slab',Georgia, serif;
+	font-weight:400;
+    text-align:center;
+    text-shadow:1px 1px 1px #fff;
+
+}
+div#mri_clinician h2
+{
+	font-size:18px;
+	color:#000;
+
+}
+div#mri_clinician ul
+{
+	margin-left:50px;
+}
+
+
+div#mri_patients h1
+{
+	padding:20px;
+	font-size:32px;
+	color:#900;
+	font-family: 'Josefin Slab',Georgia, serif;
+	font-weight:400;
+    text-align:center;
+    text-shadow:1px 1px 1px #fff;
+
+}
+div#mri_comfort,div#mri_preparation,div#doc_infor{
+width:32%;
+padding-left:5px;
+padding-right:5px;
+}
+div#mri_comfort,div#mri_preparation,div#doc_infor
+{
+	float:left;
+}
+
+div#mri_comfort h1,div#mri_preparation h1,div#doc_infor h1{
+	color:#900;
+	font-family: 'Josefin Slab',Georgia, serif;
+	font-weight:400;
+    text-align:justify;
+    text-shadow:1px 1px 1px #fff;
+	font-size:20px;
+	padding:10px;
+}
+
+div.cls
+{
+	clear:both;
+	
+}
+div#footer, .stickyfooter
+{ 		
+margin:0;
+padding:0;
+padding-top:20px;
+background-image:url(../images/footer.png);
+background-repeat:no-repeat;
+margin-top:5em;
+border:none;
+}
+
+
+div#footer ul
+{   list-style:none;
+	font-family:Calibri, Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding-bottom:45px;
+	text-align:center;
+	margin-top:-40px;
+
+}
+div#footer ul li, .stickyfooter ul li
+{
+	display:inline;
+   border-right: 1px solid #000;
+
+}
+div#footer ul li a, .stickyfooter ul li a
+{
+	text-decoration:none;
+   color:#000;
+   	padding:0 5px 5px 5px;
+}
+div#footer ul li a:hover, .stickyfooter ul li a:hover
+{
+text-decoration:underline;
+}
+div#footer ul li.last-bottom 
+{
+border-right:none;
+}
+
+.stickyFooter, .push {
+height: 4em;
+font-size:12px;
+}
+div#copyright
+{
+	margin:0;
+	padding:0;
+	font-size:10px;
+	color:#000;
+	float:left;
+margin-top:-30px;
+padding-left:10px;
+}
+div#website_by
+{
+	font-size:10px;
+	color:#000;
+	float:right;
+	margin-top:-30px;
+	padding-right:10px;
+
+}
+div#website_by a
+{
+	font-size:11px;
+	text-decoration:none;
+	color:#900;
+}
+
+	
+div#mri_patient_info h1
+
+{
+	font-size:large;
+	color:#006;
+	
+	padding:20px;
+	font-size:28px;
+	color:#333;
+	font-family: 'Josefin Slab',Georgia, serif;
+	font-weight:400;
+    text-align:center;
+    text-shadow:1px 1px 1px #fff;
+
+}
+
+div#mri_patient_info{
+	width:340px;
+	position:absolute;
+	top:0;
+	left:745px;
+	margin-left:10px;
+
+
+}
+
+
+
+
+div#medical-billing-needs
+{
+	background-color:#FC0;
+	position:relative;
+	border-bottom:5px #FC0 solid;
+	border-top:5px #FC0 solid;
+	width:980px;
+	height:40px;
+}
+div#need1
+{
+
+	background-image:url(../images/open_mri_bullets.jpg);
+	background-repeat:repeat-x;
+		width:320px;
+	height:40px;
+	position:absolute;
+	left:0;
+	top:0;
+	border-left:6px #FC0 solid;
+}
+
+
+div#need2
+{
+	background-image:url(../images/open_mri_bullets.jpg);
+	background-repeat:repeat-x;
+	width:320px;
+	height:40px;
+	position:absolute;
+	left:325px;
+	top:0;
+	border-left:2px #FFF solid;
+}
+
+div#need3
+{
+
+	background-image:url(../images/open_mri_bullets.jpg);
+		background-repeat:repeat-x;
+
+	width:325px;
+	height:40px;
+	position:absolute;
+	left:645px;
+	top:0;
+	border-left:2px #FFF solid;
+	border-right:6px #FC0 solid;
+}
+div#need1 p,div#need2 p,div#need3 p
+{
+	text-align:center;
+	font-size:large;
+	padding-top:5px;
+		color:#FFF;
+
+}
+
+.imgborder
+{
+	border:#CCC 5px solid;
+}
+
+div#contactPage
+{
+	margin-left:5em;
+	text-align:left;
+	
+}
+div#contactPage h1
+{
+	font-size:3em;
+	color:#666;
+}
+
+div#contactPage h2{
+	color:#036;
+	font-size:2em;
+}
+div#contactPage p
+{
+font-size:1.3em;
+color:#333;
+margin-left:2em;
+font-family:Calibri, Arial;
+}
+
+.timings
+{
+	margin-left:2em;	
+	font-size:1.3em;
+	font-family:Calibri, Arial;
+}
+.timings h3
+{
+	color:#F60;
+}
+div#contactPage .timings ul
+{
+			list-style-image:url(../images/arrow.png);
+			color:#333;
+			font-family:Calibri, Arial;
+	
+}
+div#con_info ul	
+
+{
+		list-style-image:url(../images/arrow.png);	
+		float:left;
+		color:#333;
+		font-family:Calibri, Arial;
+		font-size:1.3em;
+		margin-left:2em;
+
+
+}
+div#map_canvas
+{
+	width:500px;
+	height:500px;
+	margin-top:50px;
+	float:right;
+}

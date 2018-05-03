@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flexible Slide-to-top Accordion</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Flexible Slide-to-top Accordion" />
+        <meta name="keywords" content="accordion, jquery, flexible, responsive, slide to top, tabs, UI, web design" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css' />
+		<noscript>
+			<style>
+				.st-accordion ul li{
+					height:auto;
+				}
+				.st-accordion ul li > a span{
+					visibility:hidden;
+				}
+			</style>
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+            </div>
+            <h1>Flexible Slide-to-top Accordion <span>with jQuery</span></h1>
+<!--			<div class="more">
+				<a href="index.html">Default Demo</a>
+				<a href="index2.html" class="current">Autocollapse Demo</a>
+				<p><strong>In this demo:</strong> Only one content panel can be open at a time</p>
+			</div>
+-->      
+
+<div class="wrapper">
+<div id="st-accordion" class="st-accordion">
+<ul>
+<li>
+<a href="#">What is MRI ?<span class="st-arrow">Open or Close</span></a>
+<div class="st-content">
+<P>Magnetic Resonance Imaging uses friendly magnetic fields to produce an unparalleled view inside the human body. MRI has become the diagnostic imaging modality of choice for most malignancies and neurological diseases of the brain and spine including:</P>
+
+Brain Tumors <br />
+Alzheimer's Disease <br />
+Cervical cancer<br />
+<p>The technology's ability to generate, non-invasively, superb anatomical details of the both bone and soft tissues has made MRI the preferred modality for most orthopedic applications including imaging of </p>
+Knee, hip, shoulder, wrist, elbow <br />
+Ligaments and tendons <br />
+Back pain and failed back syndrome<br />
+
+</div>
+</li>
+<li>
+<a href="#">What can I expect during the MRI exam?<span class="st-arrow">Open or Close
+</span></a>
+<div class="st-content">
+<p>The MRI exam itself is painless- you won't feel a thing. You may notice a slight knocking noise as each image is taken,  however, so let your technologist know if you are particularly sensitive to sound.</p> <p> As with any exam, the hardest part is to be patient. Just relax and remain still. The MRI staff will keep you informed every step of the way. Remember, they are there to assist you. Should you become uncomfortable, need help, or have questions at any point during your exam, just say so. There is a built-in intercom in the system so you can talk with the staff.</p> <p>The length of your exam depends on the type of study your doctor has ordered.  In many cases, MRI patients are done and on their way home within an hour.</p><p>After your exam, the technologist will take you back to the preparation room to collect your things. That's all there to it.</p>
+</div>
+</li>
+                                              
+<li>
+<a href="#">How can I prepare for my MRI exam ?<span class="st-arrow">Open or Close</span></a>
+<div class="st-content">
+                            
+<p>Good news – no special preparation is needed. Eat and take any prescribed medication as usual, unless your doctor tells you otherwise.</p>
+
+<p>One important thing to remember, though:  MRI and metal do not mix. </p>
+
+<p>An MRI system has a powerful magnet inside, which is why you need to follow these guidelines:</p>
+
+<p>Tell your physician and the MRI staff if you have a pacemaker, prothesis, surgical clilps, metal
+implants, or any other metal objects in your body. Some implants, such as pacemaker may be affected by an MRI exam.
+Leave metal or magnetized objects at home or give them to the MRI staff for safekeeping when you arrive for the exam. Items that might be affected by the magnet include watches, coins, keys, baby pins or other hair clips, pocketknives, and credit cards.
+Avoid wearing eye makeup because metal flakes or silvers are found in some eye shadows.</p>
+
+<p>Let the technologist know if you work around metal finishing or grinding equipment. It is important to keep the eye area free of any metallic particles.</p>
+
+<p>Finally, if you additional questions or want more information before your exam please don't hesitate to contact your physician or the staff of the MRI facility.</p>
+</div>
+
+<li>
+<a href="#">How much does it cost?<span class="st-arrow">Open or Close</span></a>
+<div class="st-content">
+<p>For most MRI scans, the cost depends somewhat on the complexity. 
+If you are covered by private insurance or by Medicare/Medicaid, then 
+these agencies pay on your behalf and reimburse the providers (ie your 
+physician/chiropractor, radiologists, and MRI facility) involved in your procedure.
+The amount actually paid by each insurance company is based upon preset medical codes, which in turn depend upon the procedure complexity. </p>
+<p>You can normally obtain some idea of the amounts paid for MRI's by visiting 
+your insurers website.</p>
+<p>
+If you have no insurance coverage, or are from a county other than United 
+States, you may pay by cash, Visa or Mastercard. Please call the 
+Center for our cash and out of country rates.
+</p>
+</div>
+</li>
+
+<li>
+<a href="#">How do I get an appointment?<span class="st-arrow">Open or Close</span></a>
+<div class="st-content">
+<p>
+You can receive MRI scans provided as long as you are preferred by 
+a physician, board certified in the USA or Canada, or by a USA certified 
+chiropractor.
+</p>
+<p>
+Simply mail or fax a requisition from signed by a referring 
+physician. Call the clinic to schedule an appointment. We will
+schedule  your appointment for the earliest possible date at a time convenient for you.</p>
+
+<p>Tel:  
+Fax:
+</p>
+</div>
+</li>
+
+<li>
+<a href="#">What can an MRI exam do for you?<span class="st-arrow">Open or Close</span></a>
+<div class="st-content">
+<p>With incredible accuracy, MRI can detect many abnormalities which 
+CT (“cat”  scanning) and X-rays cannot, especially those
+involving soft tissue. In fact, MRI reduces the need for biopsies, exploratory surgery and other diagnostic procedures which carry associated risk.  MRI is also versatile, with the ability to image most parts of the body for effective clinical evaluation of:<br /><br />
+
+brain disorders. Liver and other abdominal diseases <br />
+knee and shoulder injuries<br />
+musculoskeletal disorders<br />
+facial / neck abnormalities<br />
+blood flow and vessel disorders<br />
+traumatic injuries<br />
+eye abnormalities<br />
+spine diseases<br />
+tumor detection<br /><br />
+The better the image, the earlier  a disorder can be
+identified and evaluated, enabling doctors to treat it with g
+great success.</p>
+</li>
+
+
+</ul>
+</div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.accordion.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+			
+				$('#st-accordion').accordion({
+					oneOpenedItem	: true
+				});
+				
+            });
+        </script>
+    </body>
+</html>	

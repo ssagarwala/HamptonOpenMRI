@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hampton Open MRI, Florissant Open MRI - MRI Obtaining detailed pictures of Internal body without the use of radiation or 
+radioactive subtances </title>
+<meta name="description=" content="Hampton Open MRI, Florissant Open MRI provide MRI Magnetic Resonance Imaging,a method of 
+obtaining detailed pictures of internal body structures without the use of radiation or radioactive substances of nay kind.">
+<meta name="keywords" content="Hampton Open MRI, Florissant Open MRI">
+<meta name="robots" content="index,follow" />
+
+<link rel="stylesheet" href="default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/style-nivo.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/horizontal_meu.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+	var markers = [
+		['Hampton Open MRI', 38.601792, -90.292262],
+		['Florissant Open MRI', 38.781623, -90.277939]
+	];
+	
+	function initializeMaps() {
+		var myOptions = {
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			mapTypeControl: false
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+		var infowindow = new google.maps.InfoWindow(); 
+		var marker, i;
+		var bounds = new google.maps.LatLngBounds();
+	
+		for (i = 0; i < markers.length; i++) { 
+			var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);
+			bounds.extend(pos);
+			marker = new google.maps.Marker({
+				position: pos,
+				map: map
+			});
+			google.maps.event.addListener(marker, 'click', (function(marker, i) {
+				return function() {
+					infowindow.setContent(markers[i][0]);
+					infowindow.open(map, marker);
+				}
+			})(marker, i));
+		}
+		map.fitBounds(bounds);
+	}
+	</script>
+</head>
+<body onLoad="initializeMaps()">
+
+<div id="container">
+<a href="index.html"> 
+<img src="images/hampton-mri-header.jpg" alt="Hampton OPEN MRI, Florissant OPEN MRI" title="Hampton OPEN MRI, Florissant OPEN MRI" class="bborder" /></a>
+
+<ul class="semiopaquemenu">
+<li><a href="index.html">MRI Info</a></li>
+<li><a href="mri_clinician_info.html">Clinic Info</a></li>
+<li><a href="open_mri_referralform.html"> MRI Referral </a></li>
+<li><a href="open_mri_contactus.html">Contact Us</a></li>
+<li><a href="open_mri_locations.html" class="selected">MRI Centers</a></li>
+<li><a href="mri_registrationForm.html">Registration</a></li>
+<li><a href="open_mri_faqs.html">Faqs</a></li>
+</ul>
+<div id="map_canvas" style="width:600px; height:450px;margin-left:380px;margin-top:50px;"></div>	
+
+<div class="clear"></div>
+
+<div id="footer" class="stickyFooter"> 
+<ul>
+<li><a href="mri_disclaimer.html">Disclaimer</a></li>
+<li><a href="open_mri_faqs.html">Faqs</a></li>
+<li class="last-bottom"><a href="open_mri_contactus.html"> Contact Us</a></li>
+   
+  </ul>
+  
+<div id="copyright">Copyright 2013©  Cyber Diagnostic. All rights reserved.</div>
+ <div id="website_by">
+  Website by  <a href="http://webna.us"> webna.us</a> 
+  </div>
+  
+  </div>
+
+
+
+  <div class="cls"></div>
+
+
+</body>
+</html>
